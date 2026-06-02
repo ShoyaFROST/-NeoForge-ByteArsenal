@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "byte_armories:item/template_scythe_32",
+    "textures": {
+      "layer0": "byte_armories:item/radioactive_scythe"
+    }
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "byte_armories:item/radioactive_scythe_gui"
+      }
+    }
+  }
+}

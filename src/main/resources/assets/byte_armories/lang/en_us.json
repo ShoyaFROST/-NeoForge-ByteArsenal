@@ -1,3 +1,15 @@
 {
-  "item.byte_armories.crystal_frost": "Crystal Frost"
+  "item.byte_armories.crystal_frost": "Frost Crystal",
+  "item.byte_armories.frost_ingot": "Frost ingot",
+  "item.byte_armories.plutonium": "Plutonium Rod",
+  "item.byte_armories.plutonium_netherite": "Plutonium Netherite",
+  "item.byte_armories.armory_enhancer": "Smithing Template",
+
+  "item.byte_armories.radioactive_scythe": "Radioactive Scythe",
+  "item.byte_armories.winterfrost_katana": "Winterfrost Katana",
+  "item.byte_armories.bloodburst": "Bloodburst Katana",
+
+
+  "creativetab.byte_armories.byte_armory_materials": "Byte Armory Materials",
+  "creativetab.byte_armories.byte_armory_items": "Byte Armories"
 }
