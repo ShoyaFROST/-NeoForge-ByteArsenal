@@ -1,8 +1,15 @@
 package net.shoya.byte_armories;
 
-import net.shoya.byte_armories.datagen.ByteItemTagProvider;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.shoya.byte_armories.items.OreItems;
 import net.shoya.byte_armories.items.weaponItems;
+import net.shoya.byte_armories.particle.BlueSoulParticle;
+import net.shoya.byte_armories.particle.ByteParticles;
+import net.shoya.byte_armories.particle.Glow;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -29,6 +36,7 @@ public class RhenTutorial {
         NeoForge.EVENT_BUS.register(this);
 
         ModCreativeModeTab.register(modEventBus);
+        ByteParticles.register(modEventBus);
 
         OreItems.register(modEventBus);
         weaponItems.register(modEventBus);
@@ -47,5 +55,14 @@ public class RhenTutorial {
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
+    }
+    @EventBusSubscriber(modid = MODID, value = Dist.CLIENT)
+    public static class ClientModEvents {
+
+        @SubscribeEvent
+        public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ByteParticles.BlueSoulParticle.get(), BlueSoulParticle.Provider::new);
+            event.registerSpriteSet(ByteParticles.Glow.get(), Glow.Provider::new);
+        }
     }
 }

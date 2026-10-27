@@ -26,6 +26,7 @@ public class ModCreativeModeTab {
                         output.accept(OreItems.plutonium_netherite);
                         output.accept(OreItems.crystal_frost);
                         output.accept(OreItems.frost_ingot);
+                        output.accept(OreItems.blue_soul);
                     })
                     .build());
 
@@ -35,8 +36,9 @@ public class ModCreativeModeTab {
                     .title(Component.translatable("creativetab.byte_armories.byte_armory_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(weaponItems.radioactive_scythe);
-                        output.accept(weaponItems.bloodburst);
                         output.accept(weaponItems.winterfrost_katana);
+                        output.accept(weaponItems.bloodburst);
+                        output.accept(weaponItems.crimson_fang);
                     })
                     .build());
 

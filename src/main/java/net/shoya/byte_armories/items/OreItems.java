@@ -26,4 +26,6 @@ public class OreItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> armory_enhancer = ITEMS.register("armory_enhancer",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> blue_soul = ITEMS.register("blue_soul",
+            () -> new Item(new Item.Properties()));
 }

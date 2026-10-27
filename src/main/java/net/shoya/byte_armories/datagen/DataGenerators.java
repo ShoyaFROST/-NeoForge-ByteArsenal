@@ -14,8 +14,7 @@ import java.util.concurrent.CompletableFuture;
 
 
 @EventBusSubscriber(modid = RhenTutorial.MODID)
-public class DataGenerators {
-    @SubscribeEvent
+public class DataGenerators {  @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
